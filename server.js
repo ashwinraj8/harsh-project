@@ -42,7 +42,7 @@ app.use(methodOverride('_method'))
 //   res.render('articles/index', { articles: articles })
 // })
 
-//Routes 
+//All Routes 
 app.get('/login',(req,res)=>{
   res.render('login');
 });
