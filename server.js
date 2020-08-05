@@ -5,6 +5,7 @@ const methodOverride = require('method-override')
 let session = require('express-session');
 let passport = require('passport');
 let user = require('./routes/users');
+let leader = require('./routes/leader');
 
 
 const app = express()
@@ -47,6 +48,7 @@ app.get('/login',(req,res)=>{
 });
 app.use('/', require('./routes/index.js'));
 app.use('/users', user);
+app.use('/leadership',leader);
 
 
 app.listen(5000, console.log(`Server at 5000`));
